@@ -25,5 +25,6 @@ class JsonResponse extends Response
         }
 
         $this->getBody()->write($json);
+        $this->headers->set('Content-Type', ['application/json; charset=UTF-8']);
     }
 }
